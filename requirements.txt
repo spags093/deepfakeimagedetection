@@ -128,7 +128,7 @@ mccabe==0.6.1
 missingno==0.4.2
 mistune==0.8.4
 mkl-fft==1.0.6
-mkl-random==1.1.0
+mkl-random==1.0.1.1
 mkl-service==2.3.0
 mlxtend==0.17.3
 more-itertools==7.0.0
