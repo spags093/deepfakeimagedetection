@@ -12,5 +12,5 @@ This app is a work in progress and is part of a Capstone project for the Flatiro
 
 
 ### Contact
-For any additional questions, please contact **jeff.spags@gmail.com**
+For any additional questions, please contact **jeff.spags@gmail.com**<br>
 Follow me on <a href = 'https://twitter.com/SpagnolaJeff'> Twitter </a>!
