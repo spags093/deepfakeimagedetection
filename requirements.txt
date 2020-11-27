@@ -134,7 +134,6 @@ more-itertools==7.0.0
 multidict==5.0.2
 multiprocess==0.70.8
 munch==2.5.0
-nb-conda==2.2.1
 nb-conda-kernels==2.2.1
 nbconvert==5.5.0
 nbformat==4.4.0
