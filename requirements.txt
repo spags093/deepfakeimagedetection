@@ -57,11 +57,6 @@ missingno==0.4.2
 mistune==0.8.4
 mlxtend==0.17.3
 more-itertools==7.0.0
-nb-conda==2.2.1
-nb-conda-kernels==2.2.1
-nbconvert==5.5.0
-nbformat==4.4.0
-nbserverproxy==0.8.8
 networkx==2.3
 numpy==1.18.5
 oauthlib==3.1.0
