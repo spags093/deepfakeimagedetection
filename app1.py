@@ -1,10 +1,11 @@
-from flask import Flask, render_template, request
-import pandas as pd
+from flask import * #render_template, request
 import numpy as np
+import matplotlib.pyplot as plt
 import tensorflow as tf 
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
+from tensorflow.keras import models
 import os
 
 # Create Flask
@@ -42,6 +43,24 @@ def read_image(filename):
 
     return img
 
+def int_activations(img, model):
+    # get model layer output
+    layer_outputs = [layer.output for layer in model.layers[:8]]
+    # activation model
+    activation_model = models.Model(inputs = model.input, outputs = layer_outputs)
+    # Get an array for the activation layer
+    activations = activation_model.predict(img)
+    
+    fig, axes = plt.subplots(8, 4, figsize = (12, 24))
+    for i in range(32):
+        row = i // 4
+        column = i % 4
+        ax = axes[row, column]
+        first_layer_activation = activations[0]
+        ax.matshow(first_layer_activation[0, :, :, i], cmap='viridis')
+
+
+
 # Setting the homepage
 @app.route('/', methods = ['GET', 'POST'])
 def home():
@@ -71,6 +90,8 @@ def predict():
                   product = "Deepfake Image"
                 elif class_prediction[0] == 1:
                   product = "Real Image"
+
+                #int_activations(img, model)
 
                 return render_template('predict.html', product = product, user_image = file_path)
         except Exception:
