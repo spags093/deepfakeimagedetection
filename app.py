@@ -1,12 +1,12 @@
 from flask import * #render_template, request
+import matplotlib as plt
 import numpy as np
-import matplotlib.pyplot as plt
+import os
 import tensorflow as tf 
 from tensorflow.keras.preprocessing.image import load_img
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
 from tensorflow.keras import models
-import os
 
 # Create Flask
 app = Flask(__name__)
